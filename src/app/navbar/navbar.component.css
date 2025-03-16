@@ -1,0 +1,21 @@
+.navbar{
+    background: linear-gradient(160deg, #a82b9a, #6927eb, #334142);
+}
+
+.nav-link{
+    color: white;
+}
+
+.nav-link:focus, .nav-link:hover{
+    color: #cccccc;
+}
+
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.show{
+    color: white;
+    text-decoration: underline;
+}
+
+.navbar-nav .nav-link.active:focus, .navbar-nav .nav-link.show:focus,
+.navbar-nav .nav-link.active:hover, .navbar-nav .nav-link.show:hover{
+    color: #cccccc;
+}
