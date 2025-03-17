@@ -19,3 +19,8 @@
 .navbar-nav .nav-link.active:hover, .navbar-nav .nav-link.show:hover{
     color: #cccccc;
 }
+
+button{
+    color: white;
+    --bs-navbar-toggler-focus-width: 0;
+}
