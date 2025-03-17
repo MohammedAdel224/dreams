@@ -1,18 +1,19 @@
-<nav class="navbar navbar-expand-md sticky-top" id="navbar">
-    <div class="container-fluid">
+<header class="navbar navbar-expand-md sticky-top">
+    <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap" id="navbar">
+        <div class="d-lg-none" style="width: 2.25rem;"></div>
         <a class="navbar-brand" routerLink="/">
             <img src="WhiteDreams.svg" alt="Dreams" height="25">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
+                    <a class="nav-link" routerLink="/home" routerLinkActive="active" aria-current="page">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" routerLink="/docs">Docs</a>
+                    <a class="nav-link" routerLink="/docs" routerLinkActive="active" aria-current="page">Docs</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://github.com/MohammedAdel224/dreams" target="_blank">GitHub</a>
@@ -22,5 +23,5 @@
                 </li>
             </ul>
         </div>
-    </div>
-</nav>
+    </nav>
+</header>
