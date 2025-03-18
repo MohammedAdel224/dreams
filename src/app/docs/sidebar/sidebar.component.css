@@ -1,3 +1,7 @@
 main{
     height: calc(100cqh - 57px);
 }
+
+.btn{
+    --bs-btn-border-width: 0;
+}
