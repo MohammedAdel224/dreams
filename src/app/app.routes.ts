@@ -1,8 +1,8 @@
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { DocsComponent } from './docs/docs.component';
-import { GetStartedComponent } from './get-started/get-started.component';
 import { SlidersComponent } from './sliders/sliders.component';
+import { GetStartedComponent } from './docs/get-started/get-started.component';
 
 export const routes: Routes = [
     { path: 'home', component: HomeComponent },
