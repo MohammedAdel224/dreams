@@ -5,7 +5,6 @@ import { GetStartedComponent } from './get-started/get-started.component';
 import { SlidersComponent } from './sliders/sliders.component';
 
 export const routes: Routes = [
-    { path: '', component: HomeComponent },
     { path: 'home', component: HomeComponent },
     { path: 'docs',
         component: DocsComponent,
@@ -14,5 +13,6 @@ export const routes: Routes = [
             { path: 'components/sliders', component: SlidersComponent },
             { path: '', redirectTo: 'get-started', pathMatch: 'full'}
         ]
-    }
+    },
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
 ];
