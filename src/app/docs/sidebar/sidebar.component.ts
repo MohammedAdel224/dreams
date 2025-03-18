@@ -8,8 +8,5 @@ import { Router, RouterModule } from '@angular/router';
   styleUrl: './sidebar.component.css'
 })
 export class SidebarComponent {
-    constructor(private router: Router) {}
-    goToSliders() {
-        this.router.navigate(['docs/components/sliders']);
-      }
+
 }
