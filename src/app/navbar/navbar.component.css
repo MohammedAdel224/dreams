@@ -2,6 +2,10 @@
     background: linear-gradient(160deg, #a82b9a, #6927eb, #334142);
 }
 
+.sticky-top{
+    z-index: 0;
+}
+
 .nav-link{
     color: white;
 }
