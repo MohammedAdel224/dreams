@@ -1,5 +1,5 @@
 aside{
-    height: calc(100cqh - 57px);
+    height: calc(100vh - 57px);
     overflow-y: auto;
     top: 57px;
 }
