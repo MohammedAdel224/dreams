@@ -4,6 +4,12 @@ aside{
     top: 57px;
 }
 
+@media (width < 768px) {
+    aside{
+        height: 0;
+    }
+}
+
 .btn{
     --bs-btn-border-width: 0;
 }
