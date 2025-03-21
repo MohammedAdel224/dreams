@@ -1,12 +1,11 @@
 aside{
-    height: calc(100vh - 57px);
     overflow-y: auto;
     top: 57px;
 }
 
-@media (width < 768px) {
+@media (min-width: 768px) {
     aside{
-        height: 0;
+        height: calc(100vh - 57px);
     }
 }
 
