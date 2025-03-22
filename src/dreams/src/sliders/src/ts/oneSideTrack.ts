@@ -1,4 +1,4 @@
-import { assertBetween0And100 } from "../../../helpers/util.js";
+import { assertBetween0And100 } from "../../../helpers/util";
 import Track from "./track";
 
 class OneSideTrack extends Track{
