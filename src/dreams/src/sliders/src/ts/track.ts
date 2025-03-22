@@ -15,7 +15,7 @@ abstract class Track{
         return this.#track;
     }
 
-    abstract fill(): void;
+    abstract fill(...args: any[]): void;
 }
 
 export default Track;
