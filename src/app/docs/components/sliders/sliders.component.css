@@ -1,21 +1,3 @@
-.one-side-slider#green-slider{
-    --track-fill-color: #0013a9;
-    --track-nofill-color: #000000;
-    --thumb-color: #ffffff;
-    --thumb-border-color: #0013a9;
-    --active-thumb-color: #0013a9;
-    --active-thumb-border-color: #ffffff;
-}
-
-.one-side-slider#big-thumb{
-    --track-height: 2rem;
-    --track-border-radius: 1rem;
-    --thumb-width: 2rem;
-    --thumb-height: 2rem;
-    --active-thumb-color: #630155;
-    --thumb-border-width: 0px;
-}
-
 span.color{
     display: inline-block;
     margin: 0 0 -0.2em 0;
