@@ -33,9 +33,11 @@
                         "styles": [
                             "node_modules/bootstrap-icons/font/bootstrap-icons.css",
                             "node_modules/bootstrap/dist/css/bootstrap.min.css",
+                            "src/dreams/dist/css/dreams.min.css",
                             "src/styles.css"
                         ],
                         "scripts": [
+                            "src/dreams/dist/js/dreams.min.js",
                             "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
                         ]
                     },
