@@ -3,7 +3,7 @@
     "version": 1,
     "newProjectRoot": "projects",
     "projects": {
-        "MA": {
+        "DREAMS": {
             "projectType": "application",
             "schematics": {
                 "@schematics/angular:component": {
@@ -17,7 +17,7 @@
                 "build": {
                     "builder": "@angular-devkit/build-angular:application",
                     "options": {
-                        "outputPath": "dist/ma",
+                        "outputPath": "dist/dreams",
                         "index": "src/index.html",
                         "browser": "src/main.ts",
                         "polyfills": [
@@ -69,10 +69,10 @@
                     "builder": "@angular-devkit/build-angular:dev-server",
                     "configurations": {
                         "production": {
-                            "buildTarget": "MA:build:production"
+                            "buildTarget": "DREAMS:build:production"
                         },
                         "development": {
-                            "buildTarget": "MA:build:development"
+                            "buildTarget": "DREAMS:build:development"
                         }
                     },
                     "defaultConfiguration": "development"
