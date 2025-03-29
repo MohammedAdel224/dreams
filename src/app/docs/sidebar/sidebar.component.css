@@ -11,4 +11,10 @@ aside{
 
 .btn{
     --bs-btn-border-width: 0;
+    width: fit-content;
+}
+
+.active{
+    color: white;
+    background-color: rgba(137, 43, 226, 0.725);
 }
