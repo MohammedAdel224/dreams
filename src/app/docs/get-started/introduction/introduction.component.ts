@@ -11,6 +11,7 @@ import { Observable } from 'rxjs';
 })
 export class IntroductionComponent implements OnInit{
     initIndexHTML: string = '';
+    includeCSSAndJs: string = '';
 
     constructor(
         private util: UtilService,
@@ -20,7 +21,15 @@ export class IntroductionComponent implements OnInit{
         this.util.readFile('assets/init-index-html.html').subscribe({
             next: (response)=>{
                 this.initIndexHTML = response;
-                console.log(this.initIndexHTML);
+            },
+            error: (error)=>{
+                console.log('Error reading file: ', error);
+            }
+        });
+
+        this.util.readFile('assets/include-css-and-js.html').subscribe({
+            next: (response)=>{
+                this.includeCSSAndJs = response;
             },
             error: (error)=>{
                 console.log('Error reading file: ', error);
