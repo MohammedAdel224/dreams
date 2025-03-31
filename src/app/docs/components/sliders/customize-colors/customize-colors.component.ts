@@ -19,8 +19,6 @@ export class CustomizeColorsComponent implements OnInit{
             next: (response)=>{
                 this.cssCode = response;
                 this.innerHTML = this.util.highlightCssColors(response);
-                console.log(this.cssCode)
-                console.log(this.innerHTML)
             },
             error: (error)=>{
                 console.log('Error reading file: ', error);
