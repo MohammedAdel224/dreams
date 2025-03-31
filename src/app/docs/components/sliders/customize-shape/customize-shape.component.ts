@@ -9,7 +9,7 @@ import { CodeComponent } from "../../../../code/code.component";
     styleUrl: './customize-shape.component.css'
 })
 export class CustomizeShapeComponent implements OnInit{
-innerHTML = '';
+    innerHTML = '';
     cssCode = '';
 
     constructor(public util: UtilService){}
