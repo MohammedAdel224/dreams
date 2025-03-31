@@ -12,13 +12,5 @@
     <a type="button" class="btn btn-purple btn-lg">Download <i class="bi bi-cloud-arrow-down"></i></a>
 
     <h2 class="mt-3">Content</h2>
-    <div class="code">
-<code><pre>dreams/
-├── css/
-│   ├── dreams.css
-│   └── dreams.min.css
-└── js/
-    ├── dreams.min.js
-    └── dreams.min.js.map</pre></code>
-    </div>
+    <app-code [innerHTML]="this.dreamsDistContent" [code]="this.dreamsDistContent"></app-code>
 </main>

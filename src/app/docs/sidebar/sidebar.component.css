@@ -6,9 +6,16 @@ aside{
 @media (min-width: 768px) {
     aside{
         height: calc(100vh - 57px);
+        position: sticky;
     }
 }
 
 .btn{
     --bs-btn-border-width: 0;
+    width: fit-content;
+}
+
+.active{
+    color: white;
+    background-color: rgba(137, 43, 226, 0.725);
 }

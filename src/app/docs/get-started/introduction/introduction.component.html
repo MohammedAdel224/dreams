@@ -7,60 +7,33 @@
     <ol>
         <li>
             <p>Create a new <code>index.html</code> file in your project root.</p>
-            <div class="code">
-<code><pre>&lt;!doctype html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
-    &lt;title&gt;DREAMS demo&lt;/title&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;Hello, world!&lt;/h1&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre></code>
-            </div>
+            <app-code [innerHTML]="this.initIndexHTML" [code]="this.initIndexHTMLCode"></app-code>
         </li>
 
         <li>
             <p>Include <app-brand-name></app-brand-name>' CSS and JS. Place the <code>&lt;link&gt;</code> tag in the <code>&lt;head&gt;</code> for our CSS, and the <code>&lt;script&gt;</code> tag for our JavaScript before the closing <code>&lt;/body&gt;</code>.</p>
-            <div class="code">
-<code><pre>&lt;!doctype html&gt;
-&lt;html lang="en"&gt;
-&lt;head&gt;
-    &lt;meta charset="utf-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
-    &lt;title&gt;DREAMS demo&lt;/title&gt;
-    &lt;link href="https://cdn.jsdelivr.net/gh/MohammedAdel224/dreams{{ '@' }}v1.0.0/src/dreams/dist/css/dreams.min.css" rel="stylesheet"&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;h1&gt;Hello, world!&lt;/h1&gt;
-    &lt;script src="https://cdn.jsdelivr.net/gh/MohammedAdel224/dreams{{ '@' }}v1.0.0/src/dreams/dist/js/dreams.min.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</pre></code>
-            </div>
+            <app-code [innerHTML]="this.includeCSSAndJs" [code]="this.includeCSSAndJsCode"></app-code>
         </li>
     </ol>
 
     <h2>CDN Links</h2>
     <p>As reference, here are our primary CDN links.</p>
-    <div class="table-responsive">
-
-        <table class="table table-hover">
+    <div class="table-responsive mb-3 code">
+        <table class="table table-hover m-0">
             <thead>
                 <tr>
-                    <th class="col-3">Description</th>
-                    <th class="col-9">URL</th>
+                    <th class="col-2">Description</th>
+                    <th class="col-10">URL</th>
                 </tr>
             </thead>
             <tbody class="table-group-divider">
                 <tr>
                     <td>CSS</td>
-                    <td><code>https://cdn.jsdelivr.net/gh/MohammedAdel224/dreams{{ '@' }}v1.0.0/src/dreams/dist/css/dreams.min.css</code></td>
+                    <td class="text-break"><app-code [innerHTML]="this.util.cdn.css" [code]="this.util.cdn.css" [withContainer]="false" [class]="'text-break'"></app-code></td>
                 </tr>
                 <tr>
                     <td>JS</td>
-                    <td><code>https://cdn.jsdelivr.net/gh/MohammedAdel224/dreams{{ '@' }}v1.0.0/src/dreams/dist/js/dreams.min.js</code></td>
+                    <td class="text-break"><app-code [innerHTML]="this.util.cdn.js" [code]="this.util.cdn.js" [withContainer]="false" [class]="'text-break'"></app-code></td>
                 </tr>
             </tbody>
         </table>

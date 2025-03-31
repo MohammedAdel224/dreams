@@ -37,17 +37,6 @@ body{
     --bs-gradient: none;
 }
 
-
-.code{
-    outline: 0.15rem solid #6927eb;
-    border-radius: 0.5rem;
-    background-color: #ffffff;
-}
-.code pre{
-    margin: 0rem;
-    padding: 1rem;
-}
-
 span.color{
     display: inline-block;
     margin: 0 0 -0.2em 0;

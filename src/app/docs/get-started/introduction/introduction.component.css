@@ -1,3 +1,9 @@
 li{
     margin-top: 1rem;
 }
+
+.table-responsive{
+    margin-left: 2rem;
+    outline: 0.15rem solid #6927eb;
+    border-radius: 0.5rem;
+}
