@@ -31,4 +31,10 @@ export class UtilService {
         text = text.replaceAll('>', '&gt;');
         return text;
     }
+
+    highlightCssColors(css: string): string {
+        return css.replace(/(#(?:[0-9a-fA-F]{3}){1,2}|rgba?\(.*?\)|hsla?\(.*?\))/g, (color) => {
+            return `<span class="color" style="background-color: ${color};"></span> ${color}`;
+        });
+    }
 }
