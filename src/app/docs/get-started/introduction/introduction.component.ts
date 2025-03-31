@@ -30,6 +30,8 @@ export class IntroductionComponent implements OnInit{
         this.util.readFile('assets/include-css-and-js.html').subscribe({
             next: (response)=>{
                 this.includeCSSAndJs = response;
+                this.includeCSSAndJs = this.includeCSSAndJs.replace('cdn-css-url', this.util.cdn.css);
+                this.includeCSSAndJs = this.includeCSSAndJs.replace("cdn-js-url", this.util.cdn.js);
             },
             error: (error)=>{
                 console.log('Error reading file: ', error);
