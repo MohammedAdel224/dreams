@@ -37,25 +37,6 @@ body{
     --bs-gradient: none;
 }
 
-
-.code{
-    outline: 0.15rem solid #6927eb;
-    border-radius: 0.5rem;
-    background-color: #ffffff;
-    position: relative;
-}
-.code pre{
-    margin: 0rem;
-    padding: 1rem;
-}
-
-.code button.copy{
-    padding: 0.375rem 0.75rem;
-    background-color: transparent;
-    border: none;
-    float: right;
-}
-
 span.color{
     display: inline-block;
     margin: 0 0 -0.2em 0;
