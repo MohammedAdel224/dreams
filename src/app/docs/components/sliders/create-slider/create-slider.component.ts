@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { UtilService } from '../../../../util.service';
+import { CodeComponent } from '../../../../code/code.component';
 
 @Component({
     selector: 'app-create-slider',
-    imports: [],
+    imports: [ CodeComponent ],
     templateUrl: './create-slider.component.html',
     styleUrl: './create-slider.component.css'
 })
