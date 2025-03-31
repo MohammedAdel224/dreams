@@ -1,4 +1,4 @@
 <div [class]="'code ' + (withContainer? 'code-container ': '') + class">
-    <button><i class="bi bi-clipboard"></i></button>
+    <button (click)="this.copy()"><i class="bi bi-clipboard" #icon></i></button>
     <code><pre>{{ this.code }}</pre></code>
 </div>
