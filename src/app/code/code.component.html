@@ -1,1 +1,4 @@
-<p>code works!</p>
+<div [class]="'code ' + (withContainer? 'code-container ': '') + class">
+    <button><i class="bi bi-clipboard"></i></button>
+    <code><pre>{{ this.code }}</pre></code>
+</div>
