@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { BrandNameComponent } from '../../../brand-name/brand-name.component';
 import { UtilService } from '../../../util.service';
+import { CodeComponent } from '../../../code/code.component';
 
 @Component({
     selector: 'app-download',
-    imports: [ BrandNameComponent ],
+    imports: [ BrandNameComponent, CodeComponent ],
     templateUrl: './download.component.html',
     styleUrl: './download.component.css'
 })
