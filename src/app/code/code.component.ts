@@ -9,6 +9,7 @@ import { UtilService } from '../util.service';
 })
 export class CodeComponent {
     @Input() code = '';
+    @Input() innerHTML = '';
     @Input() withContainer = true;
     @Input() class = '';
     @ViewChild('icon') icon!: ElementRef<HTMLSpanElement>
@@ -28,11 +29,9 @@ export class CodeComponent {
 
     checkCopyIcon(){
         this.icon.nativeElement.classList.replace('bi-clipboard', 'bi-clipboard-check');
-        console.log(this.icon.nativeElement.classList)
     }
 
     uncheckCopyIcon(){
         this.icon.nativeElement.classList.replace('bi-clipboard-check', 'bi-clipboard');
-        console.log(this.icon.nativeElement.classList)
     }
 }
