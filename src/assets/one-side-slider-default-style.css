@@ -1,0 +1,24 @@
+.one-side-slider{
+    --fill-percent: 50%; /*this value will be calculated using JavaScript*/
+    --slider-pointer-events: none;
+    --track-fill-color: #630155;
+    --track-nofill-color: #ffffff;
+    --track-height: 5px;
+    --track-border-radius: 5px;
+    --thumb-width: 1em;
+    --thumb-height: 1em;
+    --thumb-color: #630155;
+    --thumb-border-color: #ffffff;
+    --thumb-border-style: solid;
+    --thumb-border-width: 3px;
+    --thumb-cursor: pointer;
+    --thumb-pointer-events: auto;
+    --active-thumb-color: #ffffff;
+    --active-thumb-border-color: #ffffff;
+    position: relative;
+    height: 50px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
