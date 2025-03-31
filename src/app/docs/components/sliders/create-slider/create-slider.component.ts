@@ -10,13 +10,15 @@ import { CodeComponent } from '../../../../code/code.component';
 })
 export class CreateSliderComponent implements OnInit {
     oneSideSlider = '';
+    oneSideSliderCode = '';
 
     constructor(public util: UtilService){}
 
     ngOnInit(): void {
         this.util.readFile('assets/one-side-slider.html').subscribe({
             next: (response)=>{
-                this.oneSideSlider = response;
+                this.oneSideSliderCode = response;
+                this.oneSideSlider = this.util.convertTextToHTML(response);
             },
             error: (error)=>{
                 console.log('Error reading file: ', error);
