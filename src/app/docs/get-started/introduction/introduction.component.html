@@ -7,15 +7,12 @@
     <ol>
         <li>
             <p>Create a new <code>index.html</code> file in your project root.</p>
-            <div class="code">
-                <button class="copy"><i class="bi bi-clipboard"></i></button>
-                <code><pre>{{ this.initIndexHTML }}</pre></code>
-            </div>
+            <app-code [code]="this.initIndexHTML"></app-code>
         </li>
 
         <li>
             <p>Include <app-brand-name></app-brand-name>' CSS and JS. Place the <code>&lt;link&gt;</code> tag in the <code>&lt;head&gt;</code> for our CSS, and the <code>&lt;script&gt;</code> tag for our JavaScript before the closing <code>&lt;/body&gt;</code>.</p>
-            <div class="code"><code><pre>{{ this.includeCSSAndJs }}</pre></code></div>
+            <app-code [code]="this.includeCSSAndJs"></app-code>
         </li>
     </ol>
 
@@ -32,11 +29,11 @@
             <tbody class="table-group-divider">
                 <tr>
                     <td>CSS</td>
-                    <td class="text-break"><code>{{ this.util.cdn.css }}</code></td>
+                    <td class="text-break"><app-code [code]="this.util.cdn.css" [withContainer]="false" [class]="'text-break'"></app-code></td>
                 </tr>
                 <tr>
                     <td>JS</td>
-                    <td class="text-break"><code>{{ this.util.cdn.js }}</code></td>
+                    <td class="text-break"><app-code [code]="this.util.cdn.js" [withContainer]="false" [class]="'text-break'"></app-code></td>
                 </tr>
             </tbody>
         </table>

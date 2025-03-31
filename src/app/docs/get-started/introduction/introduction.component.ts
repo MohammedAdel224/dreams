@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { BrandNameComponent } from '../../../brand-name/brand-name.component';
 import { UtilService } from '../../../util.service';
 import { Observable } from 'rxjs';
+import { CodeComponent } from '../../../code/code.component';
 
 @Component({
     selector: 'app-introduction',
-    imports: [BrandNameComponent],
+    imports: [BrandNameComponent, CodeComponent],
     templateUrl: './introduction.component.html',
     styleUrl: './introduction.component.css'
 })
