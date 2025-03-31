@@ -11,8 +11,8 @@ import { CodeComponent } from '../../../code/code.component';
     styleUrl: './introduction.component.css'
 })
 export class IntroductionComponent implements OnInit{
-    initIndexHTML: string = '';
-    includeCSSAndJs: string = '';
+    initIndexHTML = '';
+    includeCSSAndJs = '';
 
     constructor(
         public util: UtilService,
