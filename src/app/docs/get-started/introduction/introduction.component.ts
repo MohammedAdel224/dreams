@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BrandNameComponent } from '../../../brand-name/brand-name.component';
 import { UtilService } from '../../../util.service';
-import { Observable } from 'rxjs';
 import { CodeComponent } from '../../../code/code.component';
 
 @Component({
