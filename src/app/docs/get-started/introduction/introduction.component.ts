@@ -11,7 +11,9 @@ import { CodeComponent } from '../../../code/code.component';
 })
 export class IntroductionComponent implements OnInit{
     initIndexHTML = '';
+    initIndexHTMLCode = '';
     includeCSSAndJs = '';
+    includeCSSAndJsCode = '';
 
     constructor(
         public util: UtilService,
@@ -20,7 +22,8 @@ export class IntroductionComponent implements OnInit{
     ngOnInit(): void {
         this.util.readFile('assets/init-index-html.html').subscribe({
             next: (response)=>{
-                this.initIndexHTML = response;
+                this.initIndexHTMLCode = response;
+                this.initIndexHTML = this.util.convertTextToHTML(response);
             },
             error: (error)=>{
                 console.log('Error reading file: ', error);
@@ -29,9 +32,10 @@ export class IntroductionComponent implements OnInit{
 
         this.util.readFile('assets/include-css-and-js.html').subscribe({
             next: (response)=>{
-                this.includeCSSAndJs = response;
-                this.includeCSSAndJs = this.includeCSSAndJs.replace('cdn-css-url', this.util.cdn.css);
-                this.includeCSSAndJs = this.includeCSSAndJs.replace("cdn-js-url", this.util.cdn.js);
+                response = response.replace('cdn-css-url', this.util.cdn.css);
+                response = response.replace("cdn-js-url", this.util.cdn.js);
+                this.includeCSSAndJsCode = response;
+                this.includeCSSAndJs = this.util.convertTextToHTML(response);
             },
             error: (error)=>{
                 console.log('Error reading file: ', error);
