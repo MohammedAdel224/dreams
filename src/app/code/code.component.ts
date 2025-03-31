@@ -1,5 +1,6 @@
 import { Component, ElementRef, Input, ViewChild } from '@angular/core';
 import { UtilService } from '../util.service';
+import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
     selector: 'app-code',
@@ -16,7 +17,11 @@ export class CodeComponent {
 
     timeoutId: NodeJS.Timeout | null = null;
 
-    constructor(public util: UtilService){}
+    constructor(
+        public util: UtilService,
+        private sanitizer: DomSanitizer
+    ){}
+
     copy(){
         if(this.timeoutId) clearTimeout(this.timeoutId);
         this.util.copyText(this.code);
@@ -33,5 +38,9 @@ export class CodeComponent {
 
     uncheckCopyIcon(){
         this.icon.nativeElement.classList.replace('bi-clipboard-check', 'bi-clipboard');
+    }
+
+    get sanitizedInnerHTML() {
+        return this.sanitizer.bypassSecurityTrustHtml(this.innerHTML);
     }
 }
