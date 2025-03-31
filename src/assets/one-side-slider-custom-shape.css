@@ -1,0 +1,8 @@
+.one-side-slider#my-slider{
+    --track-height: 2rem;
+    --track-border-radius: 1rem;
+    --thumb-width: 2rem;
+    --thumb-height: 2rem;
+    --active-thumb-color: #630155;
+    --thumb-border-width: 0px;
+}
