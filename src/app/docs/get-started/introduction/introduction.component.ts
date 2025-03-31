@@ -14,7 +14,7 @@ export class IntroductionComponent implements OnInit{
     includeCSSAndJs: string = '';
 
     constructor(
-        private util: UtilService,
+        public util: UtilService,
     ){}
 
     ngOnInit(): void {
