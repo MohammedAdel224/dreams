@@ -18,7 +18,7 @@ export class CreateSliderComponent implements OnInit {
         this.util.readFile('assets/one-side-slider.html').subscribe({
             next: (response)=>{
                 this.oneSideSliderCode = response;
-                this.oneSideSlider = this.util.convertTextToHTML(response);
+                this.oneSideSlider = this.util.convertHTMLTextToHTML(response);
             },
             error: (error)=>{
                 console.log('Error reading file: ', error);

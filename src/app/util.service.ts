@@ -26,7 +26,7 @@ export class UtilService {
         js: 'https://cdn.jsdelivr.net/gh/MohammedAdel224/dreams@v1.0.0/src/dreams/dist/js/dreams.min.js',
     }
 
-    convertTextToHTML(text: string){
+    convertHTMLTextToHTML(text: string){
         text = text.replaceAll('<', '&lt;');
         text = text.replaceAll('>', '&gt;');
         return text;

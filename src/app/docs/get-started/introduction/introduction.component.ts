@@ -23,7 +23,7 @@ export class IntroductionComponent implements OnInit{
         this.util.readFile('assets/init-index-html.html').subscribe({
             next: (response)=>{
                 this.initIndexHTMLCode = response;
-                this.initIndexHTML = this.util.convertTextToHTML(response);
+                this.initIndexHTML = this.util.convertHTMLTextToHTML(response);
             },
             error: (error)=>{
                 console.log('Error reading file: ', error);
@@ -35,7 +35,7 @@ export class IntroductionComponent implements OnInit{
                 response = response.replace('cdn-css-url', this.util.cdn.css);
                 response = response.replace("cdn-js-url", this.util.cdn.js);
                 this.includeCSSAndJsCode = response;
-                this.includeCSSAndJs = this.util.convertTextToHTML(response);
+                this.includeCSSAndJs = this.util.convertHTMLTextToHTML(response);
             },
             error: (error)=>{
                 console.log('Error reading file: ', error);
