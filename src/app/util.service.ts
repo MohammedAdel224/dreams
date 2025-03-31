@@ -25,4 +25,10 @@ export class UtilService {
         css: 'https://cdn.jsdelivr.net/gh/MohammedAdel224/dreams@v1.0.0/src/dreams/dist/css/dreams.min.css',
         js: 'https://cdn.jsdelivr.net/gh/MohammedAdel224/dreams@v1.0.0/src/dreams/dist/js/dreams.min.js',
     }
+
+    convertTextToHTML(text: string){
+        text = text.replaceAll('<', '&lt;');
+        text = text.replaceAll('>', '&gt;');
+        return text;
+    }
 }
