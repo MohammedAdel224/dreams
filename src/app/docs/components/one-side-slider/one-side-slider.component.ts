@@ -6,7 +6,7 @@ import { DefaultStyleComponent } from './default-style/default-style.component';
 import { BrandNameComponent } from "../../../brand-name/brand-name.component";
 
 @Component({
-  selector: 'app-sliders',
+  selector: 'app-one-side-slider',
   imports: [
     CreateSliderComponent,
     CustomizeColorsComponent,
@@ -14,9 +14,9 @@ import { BrandNameComponent } from "../../../brand-name/brand-name.component";
     DefaultStyleComponent,
     BrandNameComponent
 ],
-  templateUrl: './sliders.component.html',
-  styleUrl: './sliders.component.css'
+  templateUrl: './one-side-slider.component.html',
+  styleUrl: './one-side-slider.component.css'
 })
-export class SlidersComponent {
+export class OneSideSlider {
 
 }
