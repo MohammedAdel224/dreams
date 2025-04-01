@@ -11,7 +11,7 @@ export const routes: Routes = [
         component: DocsComponent,
         children:[
             { path: 'get-started/introduction', component: IntroductionComponent },
-            { path: 'components/sliders', component: SlidersComponent },
+            { path: 'components/one-side-slider', component: SlidersComponent },
             { path: 'get-started/download', component: DownloadComponent},
             { path: '', redirectTo: 'get-started/introduction', pathMatch: 'full'}
         ]
