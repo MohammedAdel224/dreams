@@ -26,6 +26,11 @@ export class UtilService {
         js: 'https://cdn.jsdelivr.net/gh/MohammedAdel224/dreams@v1.0.0/src/dreams/dist/js/dreams.min.js',
     }
 
+    download ={
+        dist:'https://github.com/MohammedAdel224/dreams/releases/download/v1.0.0/dreams-1.0.0-dist.zip',
+        src:'https://github.com/MohammedAdel224/dreams/releases/download/v1.0.0/dreams-1.0.0.zip'
+    }
+
     convertHTMLTextToHTML(text: string){
         text = text.replaceAll('<', '&lt;');
         text = text.replaceAll('>', '&gt;');

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router, RouterModule } from '@angular/router';
+import { UtilService } from '../util.service';
 
 @Component({
     selector: 'app-navbar',
@@ -10,7 +11,7 @@ import { ActivatedRoute, NavigationEnd, Router, RouterModule } from '@angular/ro
 export class NavbarComponent implements OnInit {
     currentPath: string = '';
 
-    constructor(private router: Router) {}
+    constructor(private router: Router, public util: UtilService) {}
 
     ngOnInit(): void {
         this.router.events.subscribe(event => {
