@@ -11,6 +11,7 @@ import { CodeComponent } from '../../../code/code.component';
 })
 export class DownloadComponent implements OnInit {
     dreamsDistContent = '';
+    dreamsSrcContent = '';
 
     constructor(public util: UtilService){}
 
@@ -18,6 +19,15 @@ export class DownloadComponent implements OnInit {
         this.util.readFile('assets/dreams-dist-content.txt').subscribe({
             next: (response)=>{
                 this.dreamsDistContent = response;
+            },
+            error: (error)=>{
+                console.log('Error reading file: ', error);
+            }
+        });
+
+        this.util.readFile('assets/dreams-src-content.txt').subscribe({
+            next: (response)=>{
+                this.dreamsSrcContent = response;
             },
             error: (error)=>{
                 console.log('Error reading file: ', error);
