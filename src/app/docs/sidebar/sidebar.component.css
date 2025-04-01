@@ -5,7 +5,7 @@ aside{
 
 @media (min-width: 768px) {
     aside{
-        height: calc(100vh - 57px);
+        height: calc(100vh - 56px);
         position: sticky;
     }
 }
