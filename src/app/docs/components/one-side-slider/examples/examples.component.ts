@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ComponentRef, ViewChild, ViewContainerRef } from '@angular/core';
-import { Example } from './example';
+import { Example } from './example.interface';
 import { Example1Component } from './example1/example1.component';
 import { Example2Component } from "./example2/example2.component";
 import { CodeComponent } from "../../../../code/code.component";
