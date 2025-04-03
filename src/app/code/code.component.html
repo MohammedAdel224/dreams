@@ -1,0 +1,4 @@
+<div [class]="'code ' + (withContainer? 'code-container ': '') + class">
+    <button (click)="this.copy()"><i class="bi bi-clipboard" #icon></i></button>
+    <code><pre [innerHTML]="this.sanitizedInnerHTML"></pre></code>
+</div>

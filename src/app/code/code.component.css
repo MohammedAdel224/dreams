@@ -1,0 +1,30 @@
+.code-container{
+    border: 0.15rem solid black;
+    background-color: #150027;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+
+.code{
+    position: relative;
+}
+
+pre{
+    margin: 0rem;
+    text-wrap: inherit;
+}
+
+.code-container button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    float: none;
+}
+
+button{
+    padding: 0.375rem 0.75rem;
+    background-color: transparent;
+    border: none;
+    color: white;
+    float: right;
+}

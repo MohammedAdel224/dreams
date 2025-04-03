@@ -1,0 +1,7 @@
+.cover{
+    height: calc(100cqh - 57px);
+}
+
+.cover img{
+    margin-top: calc((100cqh - 57px) / 5);
+}

@@ -1,0 +1,19 @@
+footer{
+    background: linear-gradient(340deg, #a82b9a, #6927eb, #334142);
+}
+
+p{
+    font-size: 0.75rem;
+}
+
+a{
+    color: white;
+    display: inline-block;
+    margin: 5px;
+}
+
+.vertical-line{
+    width: 2px;
+    height: 100%;
+    background-color: white;
+}
