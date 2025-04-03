@@ -6,8 +6,8 @@
             @if(selectedExample){
                 <p>CSS</p>
                 <app-code
-                    [innerHTML]="this.selectedExample.HighlightedCSS"
-                    [code]="this.selectedExample.CSS"
+                    [innerHTML]="selectedExample.HighlightedCSS"
+                    [code]="selectedExample.CSS"
                     [class]="'code-container code-dark'"
                     #exampleCode>
                 </app-code>
@@ -18,7 +18,8 @@
                 class="h-100 position-absolute start-0 top-0 bg-transparent border-0"
                 type="button"
                 data-bs-target="#examples"
-                data-bs-slide="prev">
+                data-bs-slide="prev"
+                (click)="prevoiusPageNumber()">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
@@ -29,13 +30,13 @@
                         <div class="col-sm-6 d-flex justify-content-center align-items-center">
                             <div class="example d-flex flex-row flex-sm-column justify-content-center align-items-center">
                                 <app-example1 class="w-100"></app-example1>
-                                <button class="btn" (click)="showExample(this.examples[0])">Show</button>
+                                <button class="btn" (click)="showExample(examples[0])">Show</button>
                             </div>
                         </div>
                         <div class="col-sm-6 d-flex justify-content-center align-items-center">
                             <div class="example d-flex flex-row flex-sm-column justify-content-center align-items-center">
                                 <app-example2 class="w-100"></app-example2>
-                                <button class="btn" (click)="showExample(this.examples[1])">Show</button>
+                                <button class="btn" (click)="showExample(examples[1])">Show</button>
                             </div>
                         </div>
                     </div>
@@ -46,11 +47,13 @@
                 class="h-100 position-absolute end-0 top-0 bg-transparent border-0"
                 type="button"
                 data-bs-target="#examples"
-                data-bs-slide="next">
+                data-bs-slide="next"
+                (click)="nextPageNumber()">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
+        <p class="text-center">Page {{currentPageNumber}} / {{numberOfPages}}</p>
     </div>
 </section>
 
