@@ -1,0 +1,71 @@
+<section>
+    <h2>Examples</h2>
+    <div class="exampels-container">
+        <div class="mb-0 p-3 exampleShow">
+            <ng-container #showContainer></ng-container>
+            @if(selectedExample){
+                <p>CSS</p>
+                <app-code
+                    [innerHTML]="this.selectedExample.HighlightedCSS"
+                    [code]="this.selectedExample.CSS"
+                    #exampleCode>
+                </app-code>
+            }
+        </div>
+        <div id="examples" class="carousel slide position-relative mt-0 p-3">
+            <button class="h-100 position-absolute start-0 top-0 bg-transparent border-0" type="button" data-bs-target="#examples" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+
+            <div class="carousel-inner mx-auto py-1">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-sm-6 d-flex justify-content-center align-items-center">
+                            <div class="example d-flex flex-column justify-content-center align-items-center">
+                                <app-example1 class="w-100"></app-example1>
+                                <button class="btn" (click)="showExample(this.examples[0])">Show</button>
+                            </div>
+                        </div>
+                        <div class="col-sm-6 d-flex justify-content-center align-items-center">
+                            <div class="example d-flex flex-column justify-content-center align-items-center">
+                                <app-example2 class="w-100"></app-example2>
+                                <button class="btn" (click)="showExample(this.examples[1])">Show</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6 d-flex justify-content-center align-items-center">
+                                <div class="example">3</div>
+                            </div>
+                            <div class="col-6 d-flex justify-content-center align-items-center">
+                                <div class="example">4</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-6 d-flex justify-content-center align-items-center">
+                                <div class="example">5</div>
+                            </div>
+                            <div class="col-6 d-flex justify-content-center align-items-center">
+                                <div class="example">6</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="h-100 position-absolute end-0 top-0 bg-transparent border-0" type="button" data-bs-target="#examples" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
+
