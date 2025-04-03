@@ -42,4 +42,8 @@ export class UtilService {
             return `<span class="color" style="background-color: ${color};"></span> ${color}`;
         });
     }
+
+    scrollTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 }
