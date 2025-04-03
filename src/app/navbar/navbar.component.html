@@ -17,10 +17,24 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav d-flex flex-row me-auto justify-content-center">
                 <li class="nav-item me-3 me-md-0">
-                    <a class="nav-link" routerLink="/home" routerLinkActive="active" aria-current="page">Home</a>
+                    <a
+                        class="nav-link"
+                        routerLink="/home"
+                        routerLinkActive="active"
+                        aria-current="page"
+                        (click)="util.scrollTop()">
+                        Home
+                    </a>
                 </li>
                 <li class="nav-item me-3 me-md-0">
-                    <a class="nav-link" routerLink="/docs" routerLinkActive="active" aria-current="page">Docs</a>
+                    <a
+                        class="nav-link"
+                        routerLink="/docs"
+                        routerLinkActive="active"
+                        aria-current="page"
+                        (click)="util.scrollTop()">
+                        Docs
+                    </a>
                 </li>
                 <li class="nav-item me-3 me-md-0">
                     <a class="nav-link" href="https://github.com/MohammedAdel224/dreams" target="_blank">GitHub</a>
