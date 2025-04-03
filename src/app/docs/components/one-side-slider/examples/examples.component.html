@@ -14,7 +14,11 @@
             }
         </div>
         <div id="examples" class="carousel slide position-relative mt-0 p-3">
-            <button class="h-100 position-absolute start-0 top-0 bg-transparent border-0" type="button" data-bs-target="#examples" data-bs-slide="prev">
+            <button
+                class="h-100 position-absolute start-0 top-0 bg-transparent border-0"
+                type="button"
+                data-bs-target="#examples"
+                data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
@@ -23,13 +27,13 @@
                 <div class="carousel-item active">
                     <div class="row">
                         <div class="col-sm-6 d-flex justify-content-center align-items-center">
-                            <div class="example d-flex flex-column justify-content-center align-items-center">
+                            <div class="example d-flex flex-row flex-sm-column justify-content-center align-items-center">
                                 <app-example1 class="w-100"></app-example1>
                                 <button class="btn" (click)="showExample(this.examples[0])">Show</button>
                             </div>
                         </div>
                         <div class="col-sm-6 d-flex justify-content-center align-items-center">
-                            <div class="example d-flex flex-column justify-content-center align-items-center">
+                            <div class="example d-flex flex-row flex-sm-column justify-content-center align-items-center">
                                 <app-example2 class="w-100"></app-example2>
                                 <button class="btn" (click)="showExample(this.examples[1])">Show</button>
                             </div>
@@ -38,7 +42,11 @@
                 </div>
             </div>
 
-            <button class="h-100 position-absolute end-0 top-0 bg-transparent border-0" type="button" data-bs-target="#examples" data-bs-slide="next">
+            <button
+                class="h-100 position-absolute end-0 top-0 bg-transparent border-0"
+                type="button"
+                data-bs-target="#examples"
+                data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
