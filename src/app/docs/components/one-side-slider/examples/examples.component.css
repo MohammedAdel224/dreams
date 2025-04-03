@@ -1,14 +1,7 @@
-.exampleShow, #examples{
+.exampels-container{
     border: 3px solid #320143;
     background-color: #dfdfdf;
-}
-.exampleShow{
-    border-bottom: none;
-    border-radius: 20px 20px 0 0;
-}
-#examples{
-    border-top: none;
-    border-radius: 0 0 20px 20px;
+    border-radius: 20px;
 }
 
 .example {
