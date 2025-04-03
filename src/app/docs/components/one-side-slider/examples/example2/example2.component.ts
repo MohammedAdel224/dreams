@@ -16,7 +16,7 @@ export class Example2Component implements OnInit, Example {
     constructor(private util: UtilService) {}
 
     ngOnInit(): void {
-        this.util.readFile('assets/example2.component.css').subscribe({
+        this.util.readFile('assets/one-side-slider/example2.css').subscribe({
             next: (response)=>{
                 this.css = response;
                 this.highlightedCss = this.util.highlightCssColors(response);

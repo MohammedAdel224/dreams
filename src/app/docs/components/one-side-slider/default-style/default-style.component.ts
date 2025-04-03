@@ -15,7 +15,7 @@ export class DefaultStyleComponent implements OnInit {
     constructor(public util: UtilService){}
 
     ngOnInit(): void {
-        this.util.readFile('assets/one-side-slider-default-style.css').subscribe({
+        this.util.readFile('assets/one-side-slider/default-style.css').subscribe({
             next: (response)=>{
                 this.cssCode = response;
                 this.innerHTML = this.util.highlightCssColors(response);
