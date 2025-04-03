@@ -11,7 +11,6 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class CodeComponent {
     @Input() code = '';
     @Input() innerHTML = '';
-    @Input() withContainer = true;
     @Input() class = '';
     @ViewChild('icon') icon!: ElementRef<HTMLSpanElement>
 
