@@ -1,0 +1,8 @@
+.one-side-slider#example1{
+    --track-fill-color: #0013a9;
+    --track-nofill-color: #000000;
+    --thumb-color: #ffffff;
+    --thumb-border-color: #0013a9;
+    --active-thumb-color: #0013a9;
+    --active-thumb-border-color: #ffffff;
+}
