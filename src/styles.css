@@ -45,19 +45,3 @@ span.color{
     width: 1em;
     border: 1px solid gray
 }
-
-.color.purple{
-    background-color: #630155;
-}
-
-.color.white{
-    background-color: #ffffff;
-}
-
-.color.blue{
-    background-color: #0013a9;
-}
-
-.color.black{
-    background-color: #000000;
-}
