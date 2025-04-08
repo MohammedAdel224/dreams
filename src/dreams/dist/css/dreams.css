@@ -94,3 +94,10 @@
     border-color: var(--active-thumb-border-color);
 }
 
+.one-side-slider > .slider-tooltip{
+    pointer-events: none;
+    position: absolute;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
