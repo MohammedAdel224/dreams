@@ -113,7 +113,7 @@ class Tooltip {
         this.tooltip.textContent = value.toString();
     }
     setLeft(value) {
-        this.tooltip.style.left = `${value.toString()}px`;
+        this.tooltip.style.left = `${value}px`;
     }
     get width() {
         const style = getComputedStyle(this.tooltip);
