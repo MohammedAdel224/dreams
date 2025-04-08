@@ -1,0 +1,22 @@
+<section>
+    <h2 class="h3">Create a Slider with tooltip:</h2>
+        <div class="one-side-slider mb-3">
+            <div class="track"></div>
+            <input type="range" class="slider"/>
+            <label class="slider-tooltip"></label>
+        </div>
+
+        <p>Use <span class="highlight">slider-tooltip</span> class to link it with the slider and update its value. Also You can change its style and position freely with CSS</p>
+        <p>HTML</p>
+        <app-code
+            [innerHTML]="this.html"
+            [code]="this.htmlCode"
+            [class]="'code-container code-dark mb-3'">
+        </app-code>
+        <p>CSS</p>
+        <app-code
+            [innerHTML]="this.css"
+            [code]="this.css"
+            [class]="'code-container code-dark'">
+        </app-code>
+</section>
