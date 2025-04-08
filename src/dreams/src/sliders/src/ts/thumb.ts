@@ -11,7 +11,8 @@ export class Thumb{
     get width(): number{
         const style = getComputedStyle(this.slider.toElement());
         const thumbWidth = style.getPropertyValue('--thumb-width');
-        return parseFloat(toPixel(thumbWidth));
+        const thumbBorderWidth = style.getPropertyValue('--thumb-border-width');
+        return parseFloat(toPixel(thumbWidth)) + 2 * parseFloat(toPixel(thumbBorderWidth));
     }
 }
 
