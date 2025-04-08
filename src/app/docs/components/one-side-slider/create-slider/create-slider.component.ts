@@ -15,7 +15,7 @@ export class CreateSliderComponent implements OnInit {
     constructor(public util: UtilService){}
 
     ngOnInit(): void {
-        this.util.readFile('assets/one-side-slider.html').subscribe({
+        this.util.readFile('assets/one-side-slider/one-side-slider.html').subscribe({
             next: (response)=>{
                 this.oneSideSliderCode = response;
                 this.oneSideSlider = this.util.convertHTMLTextToHTML(response);
