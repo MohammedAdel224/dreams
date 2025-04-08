@@ -16,8 +16,7 @@
     --active-thumb-color: #ffffff;
     --active-thumb-border-color: #ffffff;
     position: relative;
-    height: 50px;
-    width: 80%;
+    height: max(var(--thumb-height), var(--track-height));
     margin: auto;
     display: flex;
     align-items: center;
