@@ -1,5 +1,6 @@
 import OneSideTrack from "./oneSideTrack";
 import Slider from "./slider";
+import SliderFactory from "./sliderFactory";
 
 class OneSideSlider{
     private slider: Slider;
@@ -8,9 +9,10 @@ class OneSideSlider{
     constructor(element: HTMLDivElement){
         const track = element.querySelector(".track") as HTMLDivElement;
         const slider = element.querySelector("input.slider[type=range]") as HTMLInputElement;
+        const tooltip = element.querySelector(".tooltip") as HTMLLIElement | null;
 
         this.track = new OneSideTrack(track);
-        this.slider = new Slider(slider);
+        this.slider = SliderFactory.createSlider(slider, tooltip);
 
         this.#init(track, slider);
     }
