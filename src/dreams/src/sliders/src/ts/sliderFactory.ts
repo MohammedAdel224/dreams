@@ -2,7 +2,7 @@ import Slider from "./slider";
 import SliderWithTooltip from "./sliderWithTooltip";
 
 class SliderFactory{
-    static createSlider(slider: HTMLInputElement, tooltip: HTMLElement){
+    static createSlider(slider: HTMLInputElement, tooltip: HTMLElement | null){
         if(tooltip){
             return new SliderWithTooltip(slider, tooltip);
         }
