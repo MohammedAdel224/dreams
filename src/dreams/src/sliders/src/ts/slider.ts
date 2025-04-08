@@ -17,8 +17,8 @@ class Slider{
         this.slider.addEventListener(type, listener);
     }
 
-    setValue(value: string){
-        this.slider.value = value;
+    setValue(value: number){
+        this.slider.value = value.toString();
     }
 
     get value(): number{
