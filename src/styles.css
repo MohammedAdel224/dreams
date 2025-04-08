@@ -45,3 +45,7 @@ span.color{
     width: 1em;
     border: 1px solid gray
 }
+
+.one-side-slider{
+    height: 50px;
+}
