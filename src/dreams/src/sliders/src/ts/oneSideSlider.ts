@@ -14,15 +14,15 @@ class OneSideSlider{
         this.track = new OneSideTrack(track);
         this.slider = SliderFactory.createSlider(slider, tooltip);
 
-        this.#init(track, slider);
+        this.init(track, slider);
     }
 
-    #init(track: HTMLDivElement, slider: HTMLInputElement){
-        this.slider.addEventListener("input", ()=>{this.#fillTrack();});
-        this.#fillTrack();
+    private init(track: HTMLDivElement, slider: HTMLInputElement){
+        this.slider.addEventListener("input", ()=>{this.fillTrack();});
+        this.fillTrack();
     }
 
-    #fillTrack(){
+    private fillTrack(){
         const trackLength = this.track.width;
         if(trackLength === 0) throw new Error('track lingth is 0');
         const thumbTrackLength = this.track.width - this.slider.thumbWidth;
