@@ -1,18 +1,18 @@
 abstract class Track{
-    #track: HTMLDivElement;
+    private track: HTMLDivElement;
 
     constructor(element: HTMLDivElement){
-        this.#track = element;
+        this.track = element;
     }
 
     get width(): number{
-        const style = getComputedStyle(this.#track);
+        const style = getComputedStyle(this.track);
         const width = style.getPropertyValue('width');
-        return width ? parseFloat(width) : this.#track.clientWidth;
+        return width ? parseFloat(width) : this.track.clientWidth;
     }
 
     toElement(): HTMLDivElement{
-        return this.#track;
+        return this.track;
     }
 
     abstract fill(...args: any[]): void;
