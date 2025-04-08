@@ -21,17 +21,17 @@ function assertBetween0And100(number) {
 
 ;// ./src/dreams/src/sliders/src/ts/track.ts
 class Track {
-    #track;
+    track;
     constructor(element) {
-        this.#track = element;
+        this.track = element;
     }
     get width() {
-        const style = getComputedStyle(this.#track);
+        const style = getComputedStyle(this.track);
         const width = style.getPropertyValue('width');
-        return width ? parseFloat(width) : this.#track.clientWidth;
+        return width ? parseFloat(width) : this.track.clientWidth;
     }
     toElement() {
-        return this.#track;
+        return this.track;
     }
 }
 /* harmony default export */ const track = (Track);
@@ -51,14 +51,15 @@ class OneSideTrack extends track {
 ;// ./src/dreams/src/sliders/src/ts/thumb.ts
 
 class Thumb {
-    #slider;
+    slider;
     constructor(slider) {
-        this.#slider = slider;
+        this.slider = slider;
     }
     get width() {
-        const style = getComputedStyle(this.#slider.toElement());
+        const style = getComputedStyle(this.slider.toElement());
         const thumbWidth = style.getPropertyValue('--thumb-width');
-        return parseFloat(toPixel(thumbWidth));
+        const thumbBorderWidth = style.getPropertyValue('--thumb-border-width');
+        return parseFloat(toPixel(thumbWidth)) + 2 * parseFloat(toPixel(thumbBorderWidth));
     }
 }
 /* harmony default export */ const thumb = (Thumb);
@@ -66,67 +67,108 @@ class Thumb {
 ;// ./src/dreams/src/sliders/src/ts/slider.ts
 
 class Slider {
-    #slider;
-    #thumb;
+    slider;
+    thumb;
     constructor(element) {
-        this.#slider = element;
-        this.#thumb = new thumb(this);
+        this.slider = element;
+        this.thumb = new thumb(this);
     }
     toElement() {
-        return this.#slider;
+        return this.slider;
     }
     addEventListener(type, listener) {
-        this.#slider.addEventListener(type, listener);
+        this.slider.addEventListener(type, listener);
     }
     setValue(value) {
-        this.#slider.value = value;
+        this.slider.value = value.toString();
     }
     get value() {
-        return Number(this.#slider.value);
+        return Number(this.slider.value);
     }
     get min() {
-        return Number(this.#slider.min) | 0;
+        return Number(this.slider.min) | 0;
     }
     get max() {
-        return Number(this.#slider.max) | 100;
+        return Number(this.slider.max) | 100;
     }
     get width() {
-        const style = getComputedStyle(this.#slider);
+        const style = getComputedStyle(this.slider);
         const width = style.getPropertyValue('width');
-        return width ? parseFloat(width) : this.#slider.clientWidth;
+        return width ? parseFloat(width) : this.slider.clientWidth;
     }
     get thumbWidth() {
-        return this.#thumb.width;
+        return this.thumb.width;
     }
 }
 /* harmony default export */ const ts_slider = (Slider);
 
+;// ./src/dreams/src/sliders/src/ts/tooltip.ts
+
+class Tooltip {
+    tooltip;
+    constructor(element) {
+        this.tooltip = element;
+    }
+    setValue(value) {
+        this.tooltip.textContent = value.toString();
+    }
+    setLeft(value) {
+        this.tooltip.style.left = `${value.toString()}px`;
+    }
+    get width() {
+        const style = getComputedStyle(this.tooltip);
+        const thumbWidth = style.getPropertyValue('width');
+        return parseFloat(toPixel(thumbWidth));
+    }
+}
+/* harmony default export */ const ts_tooltip = (Tooltip);
+
 ;// ./src/dreams/src/sliders/src/ts/oneSideSlider.ts
 
 
+
 class OneSideSlider {
-    #slider;
-    #track;
+    slider;
+    track;
+    tooltip;
     constructor(element) {
         const track = element.querySelector(".track");
         const slider = element.querySelector("input.slider[type=range]");
-        this.#track = new oneSideTrack(track);
-        this.#slider = new ts_slider(slider);
-        this.#init(track, slider);
+        const tooltip = element.querySelector(".slider-tooltip");
+        this.track = new oneSideTrack(track);
+        this.slider = new ts_slider(slider);
+        this.tooltip = tooltip ? new ts_tooltip(tooltip) : null;
+        this.init();
     }
-    #init(track, slider) {
-        this.#slider.addEventListener("input", () => { this.#fillTrack(); });
-        this.#fillTrack();
+    init() {
+        this.slider.addEventListener("input", () => { this.updateSlider(); });
+        window.addEventListener("resize", () => { this.updateTooltip(); });
+        this.updateSlider();
     }
-    #fillTrack() {
-        const trackLength = this.#track.width;
+    updateSlider() {
+        this.fillTrack();
+        this.updateTooltip();
+    }
+    fillTrack() {
+        const trackLength = this.track.width;
         if (trackLength === 0)
             throw new Error('track lingth is 0');
-        const thumbTrackLength = this.#track.width - this.#slider.thumbWidth;
-        const percent = (this.#slider.value - this.#slider.min) / (this.#slider.max - this.#slider.min);
+        const thumbTrackLength = trackLength - this.slider.thumbWidth;
+        const percent = (this.slider.value - this.slider.min) / (this.slider.max - this.slider.min);
         const offset = (trackLength - thumbTrackLength) / (2 * trackLength);
         const adjustedPercent = thumbTrackLength / trackLength * percent + offset;
-        this.#track.fill(adjustedPercent * 100);
+        this.track.fill(adjustedPercent * 100);
+    }
+    updateTooltip() {
+        if (this.tooltip) {
+            this.tooltip.setValue(this.slider.value);
+            const trackLength = this.track.width;
+            const thumbWidth = this.slider.thumbWidth;
+            const tooltipTrackLength = trackLength - thumbWidth;
+            const percent = (this.slider.value - this.slider.min) / (this.slider.max - this.slider.min);
+            const newLeft = thumbWidth / 2 + percent * tooltipTrackLength;
+            this.tooltip.setLeft(newLeft);
+        }
     }
 }
 /* harmony default export */ const ts_oneSideSlider = (OneSideSlider);
