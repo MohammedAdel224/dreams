@@ -1,6 +1,6 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { UtilService } from '../../../../../util.service';
-import { Example } from '../example.interface';
+import { Example } from '../../../../../interfaces/example.interface';
 
 @Component({
     selector: 'app-example2',
