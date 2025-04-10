@@ -7,6 +7,9 @@ import { ExamplesViewerComponent } from "../../../examples-viewer/examples-viewe
 import { Example } from '../../../interfaces/example.interface';
 import { Example1Component } from './examples/example1/example1.component';
 import { Example2Component } from './examples/example2/example2.component';
+import { Example3Component } from './examples/example3/example3.component';
+import { Example4Component } from './examples/example4/example4.component';
+import { Example5Component } from './examples/example5/example5.component';
 
 @Component({
     selector: 'app-one-side-slider',
@@ -22,8 +25,10 @@ import { Example2Component } from './examples/example2/example2.component';
     })
 export class OneSideSlider implements OnInit{
     sliderExamples: Type<Example>[] = [];
+    tooltipExamples: Type<Example>[] = [];
 
     ngOnInit(): void {
         this.sliderExamples = [Example1Component, Example2Component];
+        this.tooltipExamples = [Example3Component, Example4Component, Example5Component, Example4Component, Example5Component]
     }
 }
