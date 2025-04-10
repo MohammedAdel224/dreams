@@ -41,7 +41,7 @@ class OneSideSlider{
         this.track.fill(adjustedPercent * 100);
     }
 
-    private updateTooltip(){
+    updateTooltip(){
         if(this.tooltip){
             this.tooltip.setValue(this.slider.value);
 
