@@ -22,13 +22,13 @@ export class UtilService {
     }
 
     cdn = {
-        css: 'https://cdn.jsdelivr.net/gh/MohammedAdel224/dreams@v1.0.0/src/dreams/dist/css/dreams.min.css',
-        js: 'https://cdn.jsdelivr.net/gh/MohammedAdel224/dreams@v1.0.0/src/dreams/dist/js/dreams.min.js',
+        css: 'https://cdn.jsdelivr.net/gh/MohammedAdel224/dreams@v1.1.0/src/dreams/dist/css/dreams.min.css',
+        js: 'https://cdn.jsdelivr.net/gh/MohammedAdel224/dreams@v1.1.0/src/dreams/dist/js/dreams.min.js',
     }
 
     download ={
-        dist:'https://github.com/MohammedAdel224/dreams/releases/download/v1.0.0/dreams-1.0.0-dist.zip',
-        src:'https://github.com/MohammedAdel224/dreams/releases/download/v1.0.0/dreams-1.0.0.zip'
+        dist:'https://github.com/MohammedAdel224/dreams/releases/download/v1.1.0/dreams-1.1.0-dist.zip',
+        src:'https://github.com/MohammedAdel224/dreams/releases/download/v1.1.0/dreams-1.1.0.zip'
     }
 
     convertHTMLTextToHTML(text: string){
