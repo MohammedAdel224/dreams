@@ -29,6 +29,6 @@ export class OneSideSlider implements OnInit{
 
     ngOnInit(): void {
         this.sliderExamples = [Example1Component, Example2Component];
-        this.tooltipExamples = [Example3Component, Example4Component, Example5Component, Example4Component, Example5Component]
+        this.tooltipExamples = [Example3Component, Example4Component, Example5Component]
     }
 }
