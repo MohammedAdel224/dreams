@@ -2,7 +2,13 @@
     <h1><app-brand-name></app-brand-name> One Side Slider</h1>
     <app-create-slider></app-create-slider>
     <hr>
-    <app-examples></app-examples>
+    <app-examples-viewer
+        [examples]="sliderExamples"
+        [id]="'sliderExamples'"
+        [rows]="1"
+        [cols]="2"
+    >
+    </app-examples-viewer>
     <hr>
     <app-create-slider-with-tooltip></app-create-slider-with-tooltip>
     <hr>
