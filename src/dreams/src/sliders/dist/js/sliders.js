@@ -142,7 +142,7 @@ class OneSideSlider {
     }
     init() {
         this.slider.addEventListener("input", () => { this.updateSlider(); });
-        window.addEventListener("resize", () => { this.updateTooltip(); });
+        window.addEventListener("resize", () => { this.updateSlider(); });
         this.updateSlider();
     }
     updateSlider() {
