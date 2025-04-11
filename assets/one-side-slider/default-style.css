@@ -16,9 +16,15 @@
     --active-thumb-color: #ffffff;
     --active-thumb-border-color: #ffffff;
     position: relative;
-    height: 50px;
-    width: 80%;
+    height: max(calc(var(--thumb-height) + 2 * var(--thumb-border-width)) , var(--track-height));
     margin: auto;
     display: flex;
     align-items: center;
+}
+
+.one-side-slider > .slider-tooltip{
+    pointer-events: none;
+    position: absolute;
+    transform: translateX(-50%);
+    white-space: nowrap;
 }

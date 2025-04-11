@@ -1,0 +1,12 @@
+.one-side-slider{
+    --thumb-width: 2em;
+    --thumb-height: 1.5em;
+}
+
+.slider-tooltip{
+    color: #ffffff;
+}
+
+.one-side-slider:has(.slider:active) .slider-tooltip{
+    color: #000000;
+}
