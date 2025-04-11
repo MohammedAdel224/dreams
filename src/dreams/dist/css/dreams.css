@@ -38,6 +38,8 @@
     appearance: none;
     height: var(--track-height);
     width: 100%;
+    margin: auto;
+    font-size: inherit;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
