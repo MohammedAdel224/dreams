@@ -27,8 +27,8 @@ export class UtilService {
     }
 
     download ={
-        dist:'https://github.com/MohammedAdel224/dreams/releases/download/v1.1.2/dreams-1.1.0-dist.zip',
-        src:'https://github.com/MohammedAdel224/dreams/releases/download/v1.1.2/dreams-1.1.0.zip'
+        dist:'https://github.com/MohammedAdel224/dreams/releases/download/v1.1.2/dreams-1.1.2-dist.zip',
+        src:'https://github.com/MohammedAdel224/dreams/releases/download/v1.1.2/dreams-1.1.2.zip'
     }
 
     convertHTMLTextToHTML(text: string){
