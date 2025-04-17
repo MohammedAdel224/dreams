@@ -22,6 +22,10 @@ class OneSideSlider{
     private init(){
         this.slider.addEventListener("input", ()=>{this.updateSlider();});
         window.addEventListener("resize", ()=>{this.updateSlider();});
+
+        const resizeObserver = new ResizeObserver(()=>{this.updateSlider();});
+        resizeObserver.observe(this.slider.toElement().parentElement!);
+
         this.updateSlider();
     }
 
