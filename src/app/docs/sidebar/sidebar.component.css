@@ -1,11 +1,12 @@
 aside{
     overflow-y: auto;
-    top: 57px;
+    top:calc(25px + 1.625rem);
+    /* top: 57px; */
 }
 
 @media (min-width: 768px) {
     aside{
-        height: calc(100vh - 56px);
+        height: calc(100vh - (24px + 1.625rem));
         position: sticky;
     }
 }
