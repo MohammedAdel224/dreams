@@ -1,7 +1,6 @@
 aside{
     overflow-y: auto;
     top:calc(25px + 1.625rem);
-    /* top: 57px; */
 }
 
 @media (min-width: 768px) {
