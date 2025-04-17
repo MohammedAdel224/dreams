@@ -25,6 +25,7 @@
 .one-side-slider > .track{
     width: 100%;
     height: var(--track-height);
+    font-size: 1rem;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -37,9 +38,9 @@
     -moz-appearance: none;
     appearance: none;
     height: var(--track-height);
+    font-size: 1rem;
     width: 100%;
     margin: auto;
-    font-size: inherit;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
