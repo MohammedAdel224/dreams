@@ -2,37 +2,11 @@ import '../css/sliders.css';
 import OneSideSlider from "./oneSideSlider";
 
 function initializeSliders() {
-    document.querySelectorAll('.one-side-slider').forEach((element) => {
-        const oneSideSlider = element as HTMLDivElement;
-
-        if (!(oneSideSlider as any)._initialized) {
+    document.querySelectorAll('.one-side-slider').forEach((oneSideSlider) => {
+        if (!(oneSideSlider as any)._initialized) {  // Prevent duplicate initialization
             try {
-                const sliderInstance = new OneSideSlider(oneSideSlider);
-                (oneSideSlider as any)._initialized = true;
-                (oneSideSlider as any)._slider = sliderInstance;
-
-                // 👇 Observe all ancestors for visibility changes
-                let parent = oneSideSlider.parentElement;
-                const observedAncestors = new Set<HTMLElement>();
-
-                while (parent) {
-                    if (!observedAncestors.has(parent)) {
-                        const observer = new MutationObserver(() => {
-                            if (oneSideSlider.offsetParent !== null) {
-                                sliderInstance.updateTooltip();
-                            }
-                        });
-
-                        observer.observe(parent, {
-                            attributes: true,
-                            attributeFilter: ['class', 'style']
-                        });
-
-                        observedAncestors.add(parent);
-                    }
-                    parent = parent.parentElement;
-                }
-
+                new OneSideSlider(oneSideSlider as HTMLDivElement);
+                (oneSideSlider as any)._initialized = true; // Mark as initialized
             } catch (error) {
                 console.error("Slider initialization error:", error);
             }
@@ -43,6 +17,6 @@ function initializeSliders() {
 // Run on initial load
 document.addEventListener("DOMContentLoaded", initializeSliders);
 
-// Observe dynamically added sliders (e.g., Angular routing)
+// Observe the DOM for dynamically added sliders (for Angular support)
 const observer = new MutationObserver(() => initializeSliders());
 observer.observe(document.body, { childList: true, subtree: true });
