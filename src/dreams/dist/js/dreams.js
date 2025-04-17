@@ -142,7 +142,8 @@ class OneSideSlider {
     }
     init() {
         this.slider.addEventListener("input", () => { this.updateSlider(); });
-        window.addEventListener("resize", () => { this.updateSlider(); });
+        const resizeObserver = new ResizeObserver(() => { this.updateSlider(); });
+        resizeObserver.observe(this.slider.toElement().parentElement);
         this.updateSlider();
     }
     updateSlider() {
@@ -177,31 +178,11 @@ class OneSideSlider {
 
 
 function initializeSliders() {
-    document.querySelectorAll('.one-side-slider').forEach((element) => {
-        const oneSideSlider = element;
-        if (!oneSideSlider._initialized) {
+    document.querySelectorAll('.one-side-slider').forEach((oneSideSlider) => {
+        if (!oneSideSlider._initialized) { // Prevent duplicate initialization
             try {
-                const sliderInstance = new ts_oneSideSlider(oneSideSlider);
-                oneSideSlider._initialized = true;
-                oneSideSlider._slider = sliderInstance;
-                // 👇 Observe all ancestors for visibility changes
-                let parent = oneSideSlider.parentElement;
-                const observedAncestors = new Set();
-                while (parent) {
-                    if (!observedAncestors.has(parent)) {
-                        const observer = new MutationObserver(() => {
-                            if (oneSideSlider.offsetParent !== null) {
-                                sliderInstance.updateTooltip();
-                            }
-                        });
-                        observer.observe(parent, {
-                            attributes: true,
-                            attributeFilter: ['class', 'style']
-                        });
-                        observedAncestors.add(parent);
-                    }
-                    parent = parent.parentElement;
-                }
+                new ts_oneSideSlider(oneSideSlider);
+                oneSideSlider._initialized = true; // Mark as initialized
             }
             catch (error) {
                 console.error("Slider initialization error:", error);
@@ -211,7 +192,7 @@ function initializeSliders() {
 }
 // Run on initial load
 document.addEventListener("DOMContentLoaded", initializeSliders);
-// Observe dynamically added sliders (e.g., Angular routing)
+// Observe the DOM for dynamically added sliders (for Angular support)
 const observer = new MutationObserver(() => initializeSliders());
 observer.observe(document.body, { childList: true, subtree: true });
 
