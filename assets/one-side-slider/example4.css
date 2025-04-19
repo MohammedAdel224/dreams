@@ -1,6 +1,6 @@
 .one-side-slider{
-    --thumb-width: 2em;
-    --thumb-height: 1.5em;
+    --thumb-width: 2rem;
+    --thumb-height: 1.5rem;
 }
 
 .slider-tooltip{
