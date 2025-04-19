@@ -21,14 +21,15 @@ export class UtilService {
         return this.http.get(path, {responseType: 'text'});
     }
 
+    private version = "1.1.3";
     cdn = {
-        css: 'https://cdn.jsdelivr.net/gh/MohammedAdel224/dreams@v1.1.2/src/dreams/dist/css/dreams.min.css',
-        js: 'https://cdn.jsdelivr.net/gh/MohammedAdel224/dreams@v1.1.2/src/dreams/dist/js/dreams.min.js',
+        css: `https://cdn.jsdelivr.net/gh/MohammedAdel224/dreams@v${this.version}/src/dreams/dist/css/dreams.min.css`,
+        js: `https://cdn.jsdelivr.net/gh/MohammedAdel224/dreams@v${this.version}/src/dreams/dist/js/dreams.min.js`,
     }
 
     download ={
-        dist:'https://github.com/MohammedAdel224/dreams/releases/download/v1.1.2/dreams-1.1.2-dist.zip',
-        src:'https://github.com/MohammedAdel224/dreams/releases/download/v1.1.2/dreams-1.1.2.zip'
+        dist:`https://github.com/MohammedAdel224/dreams/releases/download/v${this.version}/dreams-${this.version}-dist.zip`,
+        src:`https://github.com/MohammedAdel224/dreams/releases/download/v${this.version}/dreams-${this.version}.zip`
     }
 
     convertHTMLTextToHTML(text: string){
